@@ -227,7 +227,15 @@
 				<h2 class="title is-3">Abstract</h2>
 				<div class="content has-text-justified">
 					<p>
-						If artificial intelligence cannot effectively model the most delicate, emotional, and universal language in human culture, music, then it cannot be deemed AGI (Artificial General Intelligence). Here, we introduce <b>ChatMusician</b> , an open-source large language model (LLMs) family that integrates intrinsic musical abilities. Our primary contributions include: (1) pioneering the embedding of symbolic musical understanding and creativity within LLMs; (2) the open-sourcing of our code, datasets, and models, along with a comprehensive benchmark for evaluation; (3) demonstrating that our model outperforms existing baselines, including GPT-4, in music composition tasks; (4) introducing the first college-level symbolic music understanding benchmark. This benchmark, focusing on music understanding and reasoning, reveals a significant performance gap in current LLMs, underscoring music as an uncharted domain comparable to coding and mathematics in complexity and nuance. (5) We achieve a unification of multiple symbolic music understanding and generation tasks under a single LLM framework, enhancing the model's general capabilities without compromising its original functions. Our work not only establishes the LLM as a versatile music generalist but also extends its creative frontiers into the realm of music, showcasing the potential for LLMs to transcend traditional linguistic tasks.
+While Large Language Models (LLMs) demonstrate impressive capabilities in text generation, we find that their ability has yet to be generalized to music, humanity’s creative language. 
+We introduce <b>ChatMusician</b>, an open-source LLM that integrates intrinsic musical abilities. 
+It is based on continual pre-training and finetuning LLaMA2 on a text-compatible music representation, ABC notation, and the music is treated as a second language.
+ChatMusician can understand and generate music with a pure text tokenizer without any external multi-modal neural structures or tokenizers. 
+Interestingly, endowing musical abilities does not harm language abilities, even achieving a slightly higher MMLU score.
+Our model is capable of composing well-structured, full-length music, conditioned on texts, chords, melodies, motifs, musical forms, etc, surpassing GPT-4 baseline.
+On our meticulously curated college-level music understanding benchmark, <b>MusicTheoryBench</b>, ChatMusician surpasses LLaMA2 and GPT-3.5 on zero-shot setting by a noticeable margin. 
+Our work reveals that LLMs can be an excellent compressor for music, but there remains significant territory to be conquered.
+We release our 4B token music-language corpora <b>MusicPile</b>, the collected MusicTheoryBench, code, model and demo here.
 					</p>
 				</div>
 			</div>
