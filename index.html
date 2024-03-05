@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
-	<meta name="description"
-				content="ChatMusician">
+	<meta name="description" content="ChatMusician">
 	<meta name="keywords" content="GPT-4, open-source, vision-language">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ChatMusician</title>
@@ -13,259 +12,281 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- The following needs to be inserted somewhere on the page for the player(s) to work. -->
-	<script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.22.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/bulma-quickview/dist/js/bulma-quickview.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.22.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/bulma-quickview/dist/js/bulma-quickview.min.js"></script>
 </head>
 
 <body>
 
-<section class="hero">
-	<div class="hero-body ">
-		<section class="container">
-			<div class="columns is-centered">
-				<div class="column has-text-centered">
-					<h1 class="title is-1 publication-title">ChatMusician:</h1>
-					<h2 class="title is-2 publication-title">Understanding and Generating Music Intrinsically with LLM</h2>
- 					<div class="is-size-5">
-						<span class="author-block">
+	<section class="hero">
+		<div class="hero-body ">
+			<section class="container">
+				<div class="columns is-centered">
+					<div class="column has-text-centered">
+						<h1 class="title is-1 publication-title">ChatMusician:</h1>
+						<h2 class="title is-2 publication-title">Understanding and Generating Music Intrinsically with
+							LLM</h2>
+						<div class="is-size-5">
+							<span class="author-block">
 								<a href="" style="color:#008AD7;font-weight:normal;">Ruibin Yuan<sup>*</sup>
-								</a>,                
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Hanfeng Lin<sup>*</sup></a>,</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Yi Wang<sup>*</sup></a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Zeyue Tian<sup>*</sup></a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Shangda Wu<sup>*</sup></a>,
-						</span>
-						<br>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Tianhao Shen</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Ge Zhang</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Yuhang Wu</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Cong Liu</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Ziya Zhou</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Ziyang Ma</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Liumeng Xue</a>,
-						</span>
-						<br>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Ziyu Wang</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Qin Liu</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Tianyu Zheng</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Yizhi Li</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Yinghao Ma</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Yiming Liang</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Xiaowei Chi</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Ruibo Liu</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Zili Wang</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Pengfei Li</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Jingcheng Wu</a>,
-						</span>
-						<br>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Chenghua Lin</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Qifeng Liu</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Tao Jiang</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Wenhao Huang</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Wenhu Chen</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Emmanouil Benetos</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Jie Fu</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Gus Xia</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Roger Dannenberg</a>,
-						</span>
-						<br>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Shiyin Kang+</a>,
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Wei Xue+</a>
-						</span>
-						<span class="author-block">
-							<a href="" style="color:#008AD7;font-weight:normal;">Yike Guo+</a>
-						</span>
-					</div>
- 
- 					<br>
-					<div class="is-size-5 publication-authors">
-						<span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Hong Kong University of Science and Technology </span>
-						<span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Multimodal Art Projection</span>
-						<span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Carnegie Mellon University</span>
-						<br>
-						<span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Central Conservatory of Music</span>
-						<span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Mohamed bin Zayed University of Artificial Intelligence</span>
-						<span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Skywork AI PTE. LTD.</span>
-					</div>
-
-					<div class="is-size-5 publication-authors">
-						<span class="author-block"><sup>*</sup>Major Contribution </span>
-					</div>
-
-					<br> 
-
- 					<div class="column has-text-centered">
-						<div class="publication-links">
-							<span class="link-block">
-								<a href="https://arxiv.org/abs/2402.16153" target="_blank"
-									 class="external-link button is-normal is-rounded is-dark">
-									<span class="icon">
-											<i class="ai ai-arxiv"></i>
-									</span>
-									<span>Paper</span>
-								</a>
+								</a>,
 							</span>
-							
-							<span class="link-block">
-								<a href="https://github.com/hf-lin/ChatMusician" target="_blank" 
-									 class="external-link button is-normal is-rounded is-dark">
-									<span class="icon">
-											<i class="fab fa-github"></i>
-									</span>
-									<span>Code</span>
-									</a>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Hanfeng Lin<sup>*</sup></a>,</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Yi Wang<sup>*</sup></a>,
 							</span>
-							
-							<span class="link-block">
-								<a href="https://huggingface.co/m-a-p/ChatMusician" target="_blank"
-									 class="external-link button is-normal is-rounded is-dark">
-									<span class="icon">
-												🤗
-											</span>
-											<span>Space</span>
-										</a>
-									</span>
-							
-							<span class="link-block">
-								<a href="https://youtu.be/zt3l49K55Io" target="_blank"
-									 class="external-link button is-normal is-rounded is-dark">
-									<span class="icon">
-										<i class="fab fa-youtube"></i>
-									</span>
-									<span>Video</span>
-									</a>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Zeyue Tian<sup>*</sup></a>,
 							</span>
-							
-							<span class="link-block">
-								<a href="https://huggingface.co/datasets/m-a-p/MusicTheoryBench" target="_blank"
-									 class="external-link button is-normal is-rounded is-dark">
-									<span class="icon">
-										<i class="fa fa-database"></i>
-									</span>
-									<span>Benchmark</span>
-									</a>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Shangda Wu<sup>*</sup></a>,
 							</span>
-							
-							<span class="link-block">
-								<a href="https://huggingface.co/datasets/m-a-p/MusicPile" target="_blank"
-									 class="external-link button is-normal is-rounded is-dark">
-									<span class="icon">
-										<i class="fa fa-laugh"></i>
-									</span>
-									<span>Dataset</span>
-									</a>
+							<br>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Tianhao Shen</a>,
 							</span>
-							
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Ge Zhang</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Yuhang Wu</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Cong Liu</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Ziya Zhou</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Ziyang Ma</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Liumeng Xue</a>,
+							</span>
+							<br>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Ziyu Wang</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Qin Liu</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Tianyu Zheng</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Yizhi Li</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Yinghao Ma</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Yiming Liang</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Xiaowei Chi</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Ruibo Liu</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Zili Wang</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Pengfei Li</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Jingcheng Wu</a>,
+							</span>
+							<br>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Chenghua Lin</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Qifeng Liu</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Tao Jiang</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Wenhao Huang</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Wenhu Chen</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Emmanouil Benetos</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Jie Fu</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Gus Xia</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Roger Dannenberg</a>,
+							</span>
+							<br>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Shiyin Kang+</a>,
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Wei Xue+</a>
+							</span>
+							<span class="author-block">
+								<a href="" style="color:#008AD7;font-weight:normal;">Yike Guo+</a>
+							</span>
 						</div>
-					</div> 
-				</div>
-			</div>
-		</section>
-	</div>
-</section>
 
-<section class="section">
-	<div class="container ">
-		<!-- Abstract. -->
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-four-fifths">
-				<h2 class="title is-3">Abstract</h2>
-				<div class="content has-text-justified">
-					<p>
-While Large Language Models (LLMs) demonstrate impressive capabilities in text generation, we find that their ability has yet to be generalized to music, humanity’s creative language. 
-We introduce <b>ChatMusician</b>, an open-source LLM that integrates intrinsic musical abilities. 
-It is based on continual pre-training and finetuning LLaMA2 on a text-compatible music representation, ABC notation, and the music is treated as a second language.
-ChatMusician can understand and generate music with a pure text tokenizer without any external multi-modal neural structures or tokenizers. 
-Interestingly, endowing musical abilities does not harm language abilities, even achieving a slightly higher MMLU score.
-Our model is capable of composing well-structured, full-length music, conditioned on texts, chords, melodies, motifs, musical forms, etc, surpassing GPT-4 baseline.
-On our meticulously curated college-level music understanding benchmark, <b>MusicTheoryBench</b>, ChatMusician surpasses LLaMA2 and GPT-3.5 on zero-shot setting by a noticeable margin. 
-Our work reveals that LLMs can be an excellent compressor for music, but there remains significant territory to be conquered.
-We release our 4B token music-language corpora <b>MusicPile</b>, the collected MusicTheoryBench, code, model and demo here.
-					</p>
+						<br>
+						<div class="is-size-5 publication-authors">
+							<span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Hong
+								Kong University of Science and Technology </span>
+							<span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b>
+								Multimodal Art Projection</span>
+							<span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b>
+								Carnegie Mellon University</span>
+							<br>
+							<span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Central
+								Conservatory of Music</span>
+							<span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Mohamed
+								bin Zayed University of Artificial Intelligence</span>
+							<span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Skywork
+								AI PTE. LTD.</span>
+						</div>
+
+						<div class="is-size-5 publication-authors">
+							<span class="author-block"><sup>*</sup>Major Contribution </span>
+						</div>
+
+						<br>
+
+						<div class="column has-text-centered">
+							<div class="publication-links">
+								<span class="link-block">
+									<a href="https://arxiv.org/abs/2402.16153" target="_blank"
+										class="external-link button is-normal is-rounded is-dark">
+										<span class="icon">
+											<i class="ai ai-arxiv"></i>
+										</span>
+										<span>Paper</span>
+									</a>
+								</span>
+
+								<span class="link-block">
+									<a href="https://github.com/hf-lin/ChatMusician" target="_blank"
+										class="external-link button is-normal is-rounded is-dark">
+										<span class="icon">
+											<i class="fab fa-github"></i>
+										</span>
+										<span>Code</span>
+									</a>
+								</span>
+
+								<span class="link-block">
+									<a href="https://huggingface.co/m-a-p/ChatMusician" target="_blank"
+										class="external-link button is-normal is-rounded is-dark">
+										<span class="icon">
+											🤗
+										</span>
+										<span>Space</span>
+									</a>
+								</span>
+
+								<span class="link-block">
+									<a href="https://youtu.be/zt3l49K55Io" target="_blank"
+										class="external-link button is-normal is-rounded is-dark">
+										<span class="icon">
+											<i class="fab fa-youtube"></i>
+										</span>
+										<span>Video</span>
+									</a>
+								</span>
+
+								<span class="link-block">
+									<a href="https://huggingface.co/datasets/m-a-p/MusicTheoryBench" target="_blank"
+										class="external-link button is-normal is-rounded is-dark">
+										<span class="icon">
+											<i class="fa fa-database"></i>
+										</span>
+										<span>Benchmark</span>
+									</a>
+								</span>
+
+								<span class="link-block">
+									<a href="https://huggingface.co/datasets/m-a-p/MusicPile" target="_blank"
+										class="external-link button is-normal is-rounded is-dark">
+										<span class="icon">
+											<i class="fa fa-laugh"></i>
+										</span>
+										<span>Dataset</span>
+									</a>
+								</span>
+
+							</div>
+						</div>
+					</div>
 				</div>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/zt3l49K55Io?si=nLydmfEWuMg0WQZj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-			</div>
+			</section>
 		</div>
-		<!-- <br>
+	</section>
+
+	<section class="section">
+		<div class="container ">
+			<!-- Abstract. -->
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-four-fifths">
+					<h2 class="title is-3">Abstract</h2>
+					<div class="content has-text-justified">
+						<p>
+							While Large Language Models (LLMs) demonstrate impressive capabilities in text generation,
+							we find that their ability has yet to be generalized to music, humanity’s creative language.
+							We introduce <b>ChatMusician</b>, an open-source LLM that integrates intrinsic musical
+							abilities.
+							It is based on continual pre-training and finetuning LLaMA2 on a text-compatible music
+							representation, ABC notation, and the music is treated as a second language.
+							ChatMusician can understand and generate music with a pure text tokenizer without any
+							external multi-modal neural structures or tokenizers.
+							Interestingly, endowing musical abilities does not harm language abilities, even achieving a
+							slightly higher MMLU score.
+							Our model is capable of composing well-structured, full-length music, conditioned on texts,
+							chords, melodies, motifs, musical forms, etc, surpassing GPT-4 baseline.
+							On our meticulously curated college-level music understanding benchmark,
+							<b>MusicTheoryBench</b>, ChatMusician surpasses LLaMA2 and GPT-3.5 on zero-shot setting by a
+							noticeable margin.
+							Our work reveals that LLMs can be an excellent compressor for music, but there remains
+							significant territory to be conquered.
+							We release our 4B token music-language corpora <b>MusicPile</b>, the collected
+							MusicTheoryBench, code, model and demo here.
+						</p>
+					</div>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/zt3l49K55Io?si=nLydmfEWuMg0WQZj"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen></iframe>
+				</div>
+			</div>
+			<!-- <br>
 		<br> -->
-		<!-- <div class="container"> -->
-				<!-- Paper video. -->
-				<!-- <h2 class="title has-text-centered">Video Presentation</h2>
+			<!-- <div class="container"> -->
+			<!-- Paper video. -->
+			<!-- <h2 class="title has-text-centered">Video Presentation</h2>
 				<div class="columns is-centered has-text-centered">
 						<div class="column is-four-fifths">
 
 								<div class="publication-video">
 										<!-- Youtube embed code here -->
-										<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/__tftoxpBAw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/__tftoxpBAw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 								</div>
 						</div>
 				</div>
 		</div> -->
 
-		<!-- <br>
+			<!-- <br>
 		<br> -->
-		<!-- <div class="columns is-centered has-text-centered">
+			<!-- <div class="columns is-centered has-text-centered">
 			<div class="column is-four-fifths">
 				<h2 class="title is-4">Abstract</h2>
 				<div class="content has-text-justified">
@@ -277,11 +298,11 @@ We release our 4B token music-language corpora <b>MusicPile</b>, the collected M
 		</div>
 		<br>
 		<br>     -->
-	</div>
-</section>
+		</div>
+	</section>
 
 
-<!-- <section class="section" id="BibTeX">
+	<!-- <section class="section" id="BibTeX">
 	<div class="container  has-text-centered">
 		<h2 class="title">BibTeX</h2>
 			<pre>
@@ -297,7 +318,7 @@ year={2023}}
 </section> -->
 
 
-<!-- <section class="section" id="Acknowledgement">
+	<!-- <section class="section" id="Acknowledgement">
 	<div class="container  has-text-centered">
 		<h2 class="title">Acknowledgement</h2>
 		<p>
@@ -308,44 +329,45 @@ year={2023}}
 		</p>
 	</div>
 </section> -->
-<div class="container">
-	<div class="container has-text-centered">
-		<h2 class="title">Examples</h2>
-	</div>
-	<section class="section">
-		<div class="contrainer">
-			<div class="columns is-centered has-text-centered" >
-				<div class="column is-10">
-					<h2 class="title is-4">Chord conditioned symbolic music generation</h2>
-					<div class="container  content has-text-centered">
-						<div class="columns">
-							<div class="column is-6">
-								<p class="is-size-5"><b>Text Input:
-									<br>
-								</b> Craft musical works that follow the given chord alterations. 'Am', 'F', 'C', 'G'</p>
-								<p class="is-size-5"><b>Sheet music representation of input chords:</b>
+	<div class="container">
+		<div class="container has-text-centered">
+			<h2 class="title">Examples</h2>
+		</div>
+		<section class="section">
+			<div class="contrainer">
+				<div class="columns is-centered has-text-centered">
+					<div class="column is-10">
+						<h2 class="title is-4">Chord conditioned symbolic music generation</h2>
+						<div class="container  content has-text-centered">
+							<div class="columns">
+								<div class="column is-6">
+									<p class="is-size-5"><b>Text Input:
+											<br>
+										</b> Craft musical works that follow the given chord alterations. 'Am', 'F',
+										'C', 'G'</p>
+									<p class="is-size-5"><b>Sheet music representation of input chords:</b>
 
-	
-								</p>
-								<figure class="image is-4by1">
-									<img src="./img/chord_cond_gen/chord_1_input.png" alt="" class="src">
-								</figure>
-								<midi-player src="./asset/chord_cond_gen/1_chord.mid" sound-font>
-								</midi-player>
-								
-		
-								<br>
-								<br>	
-		
-							</div>
-		
-							
-		
-							<div class="column is-6">
-		
-								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+
+									</p>
+									<figure class="image is-4by1">
+										<img src="./img/chord_cond_gen/chord_1_input.png" alt="" class="src">
+									</figure>
+									<midi-player src="./asset/chord_cond_gen/1_chord.mid" sound-font>
+									</midi-player>
+
+
 									<br>
-										<pre>
+									<br>
+
+								</div>
+
+
+
+								<div class="column is-6">
+
+									<p class="is-size-5"><b>ABC Notation Music Output:</b>
+										<br>
+									<pre>
 X:1
 L:1/8
 M:2/4
@@ -359,60 +381,61 @@ e2 c2 |"G" d3 c | d2 B2 | GA c2 | c2 B2 |"F" A4 |
 F4 |"G" G3 A | GAGF |1"C" E3 F | EDCB, |"Am" A,4- | 
 A,4 :|2"C" E3 D | C2 B,2 |"Am" A, z3 | z4 :|
 										</pre>
-								</p>
-								<figure class="image is-3by1">
-									<img src="./img/chord_cond_gen/chord_1_output.png" alt="" class="src">
-								</figure>
-								<midi-player src="./asset/chord_cond_gen/output_1.mid" sound-font>
-								</midi-player>
-		
-								<br>
-								<br>				
+									</p>
+									<figure class="image is-3by1">
+										<img src="./img/chord_cond_gen/chord_1_output.png" alt="" class="src">
+									</figure>
+									<midi-player src="./asset/chord_cond_gen/output_1.mid" sound-font>
+									</midi-player>
+
+									<br>
+									<br>
+								</div>
+
 							</div>
-		
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	
-	
-	</section>
-	
-	<div class="is-divider"></div>
 
-	<section class="section ">
-		<!-- Results. -->
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-						<div class="column is-6">
-							<!-- chord conditioned input 2 -->
-	
-							<p class="is-size-5"><b>Text Input:
+
+		</section>
+
+		<div class="is-divider"></div>
+
+		<section class="section ">
+			<!-- Results. -->
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns">
+							<div class="column is-6">
+								<!-- chord conditioned input 2 -->
+
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Develop a musical piece using the given chord progression. 'Dm', 'C', 'Dm',
+									'Dm', 'C', 'Dm', 'C', 'Dm'</p>
+								<p class="is-size-5"><b>Sheet music representation of input chords:</b>
+									<br>
+								</p>
+								<figure class="image is-4by1">
+									<img src="./img/chord_cond_gen/chord_2_input.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/chord_cond_gen/2_chord.mid" sound-font>
+								</midi-player>
+
 								<br>
-							</b> Develop a musical piece using the given chord progression. 'Dm', 'C', 'Dm', 'Dm', 'C', 'Dm', 'C', 'Dm'</p>
-							<p class="is-size-5"><b>Sheet music representation of input chords:</b>
 								<br>
-							</p>
-							<figure class="image is-4by1">
-								<img src="./img/chord_cond_gen/chord_2_input.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/chord_cond_gen/2_chord.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>
-						</div>
-	
-						
-	
-						<div class="column is-6">
-							<!-- chord conditioned output 2 -->
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
-								<br>
-									<pre>
+							</div>
+
+
+
+							<div class="column is-6">
+								<!-- chord conditioned output 2 -->
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:6/8
@@ -425,60 +448,61 @@ z4 z D |"Dm" A2 A"C" G2 F |"Dm" FE D D2 D |
 "Bb" d2 c"^(Gm)" B2 A |"Gm" G2 G"A7" A2 G |
 "Dm" FE D D2 z |]
 									</pre>
-							</p>
-							<figure class="image is-3by1">
-								<img src="./img/chord_cond_gen/chord_2_output.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/chord_cond_gen/output_2.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>				
+								</p>
+								<figure class="image is-3by1">
+									<img src="./img/chord_cond_gen/chord_2_output.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/chord_cond_gen/output_2.mid" sound-font>
+								</midi-player>
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	</section>
+			<!--/ Results. -->
+		</section>
 
-	<div class="is-divider"></div>
+		<div class="is-divider"></div>
 
-	<section class="section ">
-		<!-- Results. -->
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-							<!-- chord conditioned input 3 -->
-	
-							<p class="is-size-5"><b>Text Input:
+		<section class="section ">
+			<!-- Results. -->
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+								<!-- chord conditioned input 3 -->
+
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b>Construct musical creations that adhere to the set chord modifications. 'D',
+									'G', 'C', 'B', 'C', 'D', 'D', 'B'</p>
+								<p class="is-size-5"><b>Sheet music representation of input chords:</b>
+									<br>
+								</p>
+								<figure class="image is-4by1">
+									<img src="./img/chord_cond_gen/chord_3_input.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/chord_cond_gen/3_chord.mid" sound-font>
+								</midi-player>
+
 								<br>
-							</b>Construct musical creations that adhere to the set chord modifications. 'D', 'G', 'C', 'B', 'C', 'D', 'D', 'B'</p>
-							<p class="is-size-5"><b>Sheet music representation of input chords:</b>
 								<br>
-							</p>
-							<figure class="image is-4by1">
-								<img src="./img/chord_cond_gen/chord_3_input.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/chord_cond_gen/3_chord.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>						
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-							<!-- chord conditioned output 3 -->
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
-								<br>
-									<pre>
+
+							</div>
+
+
+
+							<div class="column is-6">
+								<!-- chord conditioned output 3 -->
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:4/4
@@ -492,60 +516,62 @@ K:G
 "D" cBAG"A" FGAF |"A" D4 z2 FG |"G" ABGA"G/B" FGAB |
 "C" cBAB"B" G2 dc |"D" BAGF"A" GBAG |"A" D4 z2 |]
 									</pre>
-	
-							</p>
-							<figure class="image is-3by1">
-								<img src="./img/chord_cond_gen/chord_3_output.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/chord_cond_gen/output_3.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>						
+
+								</p>
+								<figure class="image is-3by1">
+									<img src="./img/chord_cond_gen/chord_3_output.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/chord_cond_gen/output_3.mid" sound-font>
+								</midi-player>
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	</section>
+			<!--/ Results. -->
+		</section>
 
-	<div class="is-divider"></div>
-</div>
+		<div class="is-divider"></div>
+	</div>
 
 
-<div class="container">
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<h2 class="title is-4">Musical form conditioned symbolic music generation</h2>
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<p class="is-size-5"><b>Text Input:</b>
+	<div class="container">
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<h2 class="title is-4">Musical form conditioned symbolic music generation</h2>
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<p class="is-size-5"><b>Text Input:</b>
+									<br>
+									Craft a musical work that incorporates the given musical pattern as a central
+									element.
+								</p>
+								<p class="is-size-5"><b>Musical Form Input:
+										<br>
+									</b> Binary, Sectional: Verse/Chorus</p>
+
 								<br>
-								Craft a musical work that incorporates the given musical pattern as a central element.</p>
-							<p class="is-size-5"><b>Musical Form Input:
 								<br>
-							</b> Binary, Sectional: Verse/Chorus</p>
-	
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned output 1 -->
-	
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
-								<br>
-									<pre>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:4/4
@@ -555,55 +581,56 @@ A2 G2 G2 Bc |d2 Bd c2 Ac | B2 G2 GFGB | A2 F2 FEFG |
 A2 G2 G2 :: d2 | G2 Bd g3 f | f2 e2 e4 | D2 FA f3 e | 
 e2 d2 d4 | G2 Bd g3 f | f2 e2 e2 g2 | fg af e2 f2 | g6 :|
 									</pre>
-	
-							</p>
-							<figure class="image is-3by1">
-								<img src="./img/form_cond_gen/form_1.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/form_cond_gen/form_1.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>				
+
+								</p>
+								<figure class="image is-3by1">
+									<img src="./img/form_cond_gen/form_1.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/form_cond_gen/form_1.mid" sound-font>
+								</midi-player>
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
-	
-	<div class="is-divider"></div>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
 
-	<section class="section ">
-		<!-- Results. -->
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns ">
-						<div class="column is-6">
-							<!-- chord conditioned input 2 -->
-	
-							<p class="is-size-5"><b>Text Input:
+		<div class="is-divider"></div>
+
+		<section class="section ">
+			<!-- Results. -->
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns ">
+							<div class="column is-6">
+								<!-- chord conditioned input 2 -->
+
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Develop a composition by incorporating elements from the given melodic
+									structure.</p>
+								<p class="is-size-5"><b>Musical Form Input:
+										<br>
+									</b>Ternary, Sectional: Verse/Chorus/Bridge</p>
+
 								<br>
-							</b> Develop a composition by incorporating elements from the given melodic structure.</p>
-							<p class="is-size-5"><b>Musical Form Input:
 								<br>
-							</b>Ternary, Sectional: Verse/Chorus/Bridge</p>
-	
-							<br>
-							<br>
-						</div>
-	
-						
-	
-						<div class="column is-6">
-							<!-- chord conditioned output 2 -->
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
-								<br>
-									<pre>
+							</div>
+
+
+
+							<div class="column is-6">
+								<!-- chord conditioned output 2 -->
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:6/8
@@ -616,54 +643,54 @@ AG^F GAB :|2 AG^F G2 A |:"Bbm" B3 dcB | f2 e dcB |
 c2 f c2 c | cfc cBA | ABB dcB | f2 e dcB |
 d2 d edc |1 cBA B2 B :|2 cBA G3 ||
 									</pre>
-	
-							</p>
-							<figure class="image is-3by1">
-								<img src="./img/form_cond_gen/form_2.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/form_cond_gen/form_7.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>				
+
+								</p>
+								<figure class="image is-3by1">
+									<img src="./img/form_cond_gen/form_2.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/form_cond_gen/form_7.mid" sound-font>
+								</midi-player>
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
-	
-	<div class="is-divider"></div>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
 
-	<section class="section ">
-		<!-- Results. -->
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<p class="is-size-5"><b>Text Input:
+		<div class="is-divider"></div>
+
+		<section class="section ">
+			<!-- Results. -->
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Follow the successive musical design to mold your composition.</p>
+								<p class="is-size-5"><b>Musical Form Input:
+										<br>
+									</b> Binary, Sectional: Verse/Chorus</p>
 								<br>
-							</b> Follow the successive musical design to mold your composition.</p>
-							<p class="is-size-5"><b>Musical Form Input:
 								<br>
-							</b> Binary, Sectional: Verse/Chorus</p>
-							<br>
-							<br>						
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
-								<br>
-									<pre>
+
+							</div>
+
+
+
+							<div class="column is-6">
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:2/4
@@ -674,46 +701,47 @@ e/d/c/B/ AA | dAfd | afd'b | agfe | d2 d2 |
 GDBG | dBge | dcBA |{c} BA/B/ GD | GDBG | dBge |
 dcBA | G2 G2 :|
 									</pre>
-							</p>
-							<figure class="image is-3by1">
-								<img src="./img/form_cond_gen/form_3.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/form_cond_gen/form_9.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>						
+								</p>
+								<figure class="image is-3by1">
+									<img src="./img/form_cond_gen/form_3.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/form_cond_gen/form_9.mid" sound-font>
+								</midi-player>
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	</section>
-	
-	<div class="is-divider"></div>
+			<!--/ Results. -->
+		</section>
 
-</div>
+		<div class="is-divider"></div>
+
+	</div>
 
 
-<div class="container">
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<h2 class="title is-4">Alphabetic musical form and motif conditioned symbolic music generation</h2>
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b>Develop a musical piece employing the provided motif and an alphabet-based structure.</p>
-							<p class="is-size-5"><b>Alphabetic Musical Form Input:</b> AB</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b> 
-								<br>
-									<pre>
+	<div class="container">
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<h2 class="title is-4">Alphabetic musical form and motif conditioned symbolic music generation</h2>
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b>Develop a musical piece employing the provided motif and an alphabet-based
+									structure.</p>
+								<p class="is-size-5"><b>Alphabetic Musical Form Input:</b> AB</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 Q:1/8=80
@@ -721,26 +749,27 @@ M:6/8
 K:D
 e2 f{a} g2
 									</pre>
-	
-							</p>	
-							<figure class="image">
-								<img src="./img/alpha_form_motif_cond_gen/motif_1.png" alt="" class="src" style="width: auto;height: auto;max-width: 50%;max-height: 50%">
-							</figure>
-							<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_1.mid" sound-font>
-							</midi-player>
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-	
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
+
+								</p>
+								<figure class="image">
+									<img src="./img/alpha_form_motif_cond_gen/motif_1.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 50%;max-height: 50%">
+								</figure>
+								<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_1.mid" sound-font>
+								</midi-player>
 								<br>
-									<pre>
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 Q:1/8=80
@@ -756,43 +785,44 @@ B2 B BAG | (F2 A) d2 A | e2 f{a} g2 f |
 (e3 e2) A | d2 f afd |{g} f2 e{g} f2 e |
 {e} d2 c{e} d2 e | (d3 d2) |]
 									</pre>
-	
-							</p>
-							<figure class="image is-2by1">
-								<img src="./img/alpha_form_motif_cond_gen/result_1.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_1_result.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>				
+
+								</p>
+								<figure class="image is-2by1">
+									<img src="./img/alpha_form_motif_cond_gen/result_1.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_1_result.mid" sound-font>
+								</midi-player>
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
-	
-	<div class="is-divider"></div>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
 
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b> Craft a piece of music that integrates both the suggested theme and letter-based structure.</p>
-							<p class="is-size-5"><b>Alphabetic Musical Form Input:</b> AB</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b> 
-								<br>
-									<pre>
+		<div class="is-divider"></div>
+
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Craft a piece of music that integrates both the suggested theme and
+									letter-based structure.</p>
+								<p class="is-size-5"><b>Alphabetic Musical Form Input:</b> AB</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 Q:1/4=120
@@ -801,7 +831,7 @@ K:D
 (d/e/)S f>dB A>GF E>ee e2 d/e/ f>dB
 									</pre>
 								<br>
-									<pre>
+								<pre>
 X:2
 L:1/8
 Q:1/4=120
@@ -809,32 +839,34 @@ M:6/8
 K:D
 d>fa d>fa
 									</pre>
-	
-							</p>	
-							<figure class="image">
-								<img src="./img/alpha_form_motif_cond_gen/motif_8_1.png" alt="" class="src" style="width: auto;height: auto">
-							</figure>
-							<figure class="image">
-								<img src="./img/alpha_form_motif_cond_gen/motif_8_2.png" alt="" class="src" style="width: auto;height: auto;max-width: 50%;max-height: 50%">
-							</figure>
-							<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_8_1.mid" sound-font>
-							</midi-player>
-							<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_8_2.mid" sound-font>
-							</midi-player>
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned output 1 -->
-	
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
+
+								</p>
+								<figure class="image">
+									<img src="./img/alpha_form_motif_cond_gen/motif_8_1.png" alt="" class="src"
+										style="width: auto;height: auto">
+								</figure>
+								<figure class="image">
+									<img src="./img/alpha_form_motif_cond_gen/motif_8_2.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 50%;max-height: 50%">
+								</figure>
+								<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_8_1.mid" sound-font>
+								</midi-player>
+								<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_8_2.mid" sound-font>
+								</midi-player>
 								<br>
-									<pre>
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 Q:1/4=120
@@ -845,102 +877,106 @@ D>dd d2 d/e/ | f>dB AF>D |E>ee e2 d/e/ | f>dB AFA | D>dd d2 ||
 d | d>fa d>fa | d>fa{g} !fermata!a2 (g/f/) |!p! g>bg e>ge |
 !f! c>AA A2 (f/g/) | a3 f3 | e3 d3 |{DE} F>EF G>AB | AdF{F} E2 ||
 									</pre>
-	
-							</p>
-							<figure class="image is-3by1">
-								<img src="./img/alpha_form_motif_cond_gen/result_8.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_8_result.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>				
+
+								</p>
+								<figure class="image is-3by1">
+									<img src="./img/alpha_form_motif_cond_gen/result_8.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_8_result.mid" sound-font>
+								</midi-player>
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
-	
-	<div class="is-divider"></div>
-	
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned input 1 -->
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b> Develop a harmonic creation that incorporates the given motif and adheres to the specified alphabetical order.</p>
-							<p class="is-size-5"><b>Alphabetic Musical Form Input:</b> ABC</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b> 
-								<br>
-									<pre>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
+
+		<div class="is-divider"></div>
+
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<!-- chord conditioned input 1 -->
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Develop a harmonic creation that incorporates the given motif and adheres to
+									the specified alphabetical order.</p>
+								<p class="is-size-5"><b>Alphabetic Musical Form Input:</b> ABC</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/16
 M:3/4
 K:G
 eceg dBdg
 									</pre>
-	
+
 								<br>
-									<pre>
+								<pre>
 X:2
 L:1/16
 M:3/4
 K:G
 G2 D2 GABc d2dB d2dB g2gB cBcd
 									</pre>
-	
+
 								<br>
-									<pre>
+								<pre>
 X:3
 L:1/16
 M:3/4
 K:G
 G2 D2 GBdB GBdg dBdB Gcec Gceg
 									</pre>
-	
-							</p>	
-							<figure class="image">
-								<img src="./img/alpha_form_motif_cond_gen/motif_9_1.png" alt="" class="src" style="width: auto;height: auto;max-width: 50%;max-height: 50%">
-							</figure>
-							<figure class="image">
-								<img src="./img/alpha_form_motif_cond_gen/motif_9_2.png" alt="" class="src" style="width: auto;height: auto;max-width: 80%;max-height: 80%">
-							</figure>
-							<figure class="image">
-								<img src="./img/alpha_form_motif_cond_gen/motif_9_3.png" alt="" class="src" style="width: auto;height: auto;max-width: 80%;max-height: 80%">
-							</figure>
-							<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_9_1.mid" sound-font>
-							</midi-player>
-							<br>
-							<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_9_2.mid" sound-font>
-							</midi-player>
-							<br>
-							<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_9_3.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned output 1 -->
-	
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
+
+								</p>
+								<figure class="image">
+									<img src="./img/alpha_form_motif_cond_gen/motif_9_1.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 50%;max-height: 50%">
+								</figure>
+								<figure class="image">
+									<img src="./img/alpha_form_motif_cond_gen/motif_9_2.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 80%;max-height: 80%">
+								</figure>
+								<figure class="image">
+									<img src="./img/alpha_form_motif_cond_gen/motif_9_3.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 80%;max-height: 80%">
+								</figure>
+								<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_9_1.mid" sound-font>
+								</midi-player>
 								<br>
-									<pre>
+								<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_9_2.mid" sound-font>
+								</midi-player>
+								<br>
+								<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_9_3.mid" sound-font>
+								</midi-player>
+
+								<br>
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/16
 M:3/4
@@ -955,89 +991,92 @@ ecge dBdB cAFD | G2 D2 GBdB GBdg |dBdB g2gB cBcd |
 e2eB c2cA A2A2 | ddBA A2G2"^D.C." G4 :|
 									</pre>
 
-							</p>
-							<figure class="image is-2by1">
-								<img src="./img/alpha_form_motif_cond_gen/result_9.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_9_result.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>				
+								</p>
+								<figure class="image is-2by1">
+									<img src="./img/alpha_form_motif_cond_gen/result_9.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/alpha_form_motif_cond_gen/form_motif_9_result.mid" sound-font>
+								</midi-player>
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
 
-	<div class="is-divider"></div>
+		<div class="is-divider"></div>
 
-</div>
+	</div>
 
 
-<div class="container">
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<h2 class="title is-4">Terminology musical form and motif conditioned symbolic music generation</h2>
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned input 1 -->
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b> Develop melodies by fusing the assigned musical pattern with the given motif.</p>
-							<p class="is-size-5"><b>Musical Form Input:</b> Binary, Sectional: Verse/Chorus</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b> 
-								<br>
-									<pre>
+	<div class="container">
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<h2 class="title is-4">Terminology musical form and motif conditioned symbolic music generation</h2>
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<!-- chord conditioned input 1 -->
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Develop melodies by fusing the assigned musical pattern with the given motif.
+								</p>
+								<p class="is-size-5"><b>Musical Form Input:</b> Binary, Sectional: Verse/Chorus</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:2/4
 K:F
 F/G/ BGFA GABd Bcde f^f/=f/ d/c/B/A/ BG^FA
 									</pre>
-	
+
 								<br>
-									<pre>
+								<pre>
 X:2
 L:1/8
 M:2/4
 K:F
 f3 (c/d/)(d/e/) (e/f/)(f/g/) g>ec e/d/ d/c/c/B/ B/A/A/G/
 									</pre>
-	
-							</p>	
-							<figure class="image">
-								<img src="./img/term_form_motif_cond_gen/motif_2_1.png" alt="" class="src" style="width: auto;height: auto;max-width: 100%;max-height: 100%">
-							</figure>
-							<figure class="image">
-								<img src="./img/term_form_motif_cond_gen/motif_2_2.png" alt="" class="src" style="width: auto;height: auto;max-width: 80%;max-height: 80%">
-							</figure>
-							<midi-player src="./asset/term_form_motif_cond_gen/form_motif_2_1.mid" sound-font>
-							</midi-player>
-							<midi-player src="./asset/term_form_motif_cond_gen/form_motif_2_2.mid" sound-font>
-							</midi-player>
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned output 1 -->
-	
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
+
+								</p>
+								<figure class="image">
+									<img src="./img/term_form_motif_cond_gen/motif_2_1.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 100%;max-height: 100%">
+								</figure>
+								<figure class="image">
+									<img src="./img/term_form_motif_cond_gen/motif_2_2.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 80%;max-height: 80%">
+								</figure>
+								<midi-player src="./asset/term_form_motif_cond_gen/form_motif_2_1.mid" sound-font>
+								</midi-player>
+								<midi-player src="./asset/term_form_motif_cond_gen/form_motif_2_2.mid" sound-font>
+								</midi-player>
 								<br>
-									<pre>
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:2/4
@@ -1049,71 +1088,74 @@ F/G/ |:"F" BA"C7" GG |"F" FA"C7" G2 |"F" F>G"C7" AB |
 "F" GA/B/ c/d/e/f/ | f3 (c/d/)(d/e/) |
 "Gm" (e/f/)(f/g/) g>ec |"C7" e/d/ d/c/c/B/ B/A/A/G/ |"F" FA/c/ f z :|
 									</pre>
-	
-							</p>
-							<figure class="image is-2by1">
-								<img src="./img/term_form_motif_cond_gen/result_2.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/term_form_motif_cond_gen/term_form_motif_2_result.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>				
+
+								</p>
+								<figure class="image is-2by1">
+									<img src="./img/term_form_motif_cond_gen/result_2.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/term_form_motif_cond_gen/term_form_motif_2_result.mid"
+									sound-font>
+								</midi-player>
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
-	
-	<div class="is-divider"></div>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
 
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned input 1 -->
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b> Create music by incorporating the assigned motif into the predetermined musical arrangement.</p>
-							<p class="is-size-5"><b>Musical Form Input:</b> Only One Section</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b> 
-								<br>
-									<pre>
+		<div class="is-divider"></div>
+
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<!-- chord conditioned input 1 -->
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Create music by incorporating the assigned motif into the predetermined musical
+									arrangement.</p>
+								<p class="is-size-5"><b>Musical Form Input:</b> Only One Section</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:9/8
 K:Emin
 vB2 E E2 F G2 A
 									</pre>
-							</p>	
-							<figure class="image is-2by1">
-								<img src="./img/term_form_motif_cond_gen/motif_4.png" alt="" class="src" style="width: auto;height: auto;max-width: 50%;max-height: 50%">
-							</figure>
-							<midi-player src="./asset/term_form_motif_cond_gen/form_motif_4.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned output 1 -->
-	
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
+								</p>
+								<figure class="image is-2by1">
+									<img src="./img/term_form_motif_cond_gen/motif_4.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 50%;max-height: 50%">
+								</figure>
+								<midi-player src="./asset/term_form_motif_cond_gen/form_motif_4.mid" sound-font>
+								</midi-player>
+
 								<br>
-									<pre>
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:9/8
@@ -1128,85 +1170,89 @@ K:Emin
 "^(C)" cde"D" dcB"G" A2 G |"Em" e2 B"^Av" A2 F"Bm" G2 A |
 "G" B2 G"D" A2 F"Em" G2 E |]
 									</pre>
-	
-	
-							</p>
-							<figure class="image is-2by1">
-								<img src="./img/term_form_motif_cond_gen/result_4.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/term_form_motif_cond_gen/term_form_motif_4_result.mid" sound-font>
-							</midi-player>
-							<br>
-							<br>				
+
+
+								</p>
+								<figure class="image is-2by1">
+									<img src="./img/term_form_motif_cond_gen/result_4.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/term_form_motif_cond_gen/term_form_motif_4_result.mid"
+									sound-font>
+								</midi-player>
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
-	
-	<div class="is-divider"></div>
-	
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned input 1 -->
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b> Create tunes by incorporating the provided motif in the specified composition structure.</p>
-							<p class="is-size-5"><b>Musical Form Input:</b> Binary, Sectional: Verse/Chorus</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b> 
-								<br>
-									<pre>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
+
+		<div class="is-divider"></div>
+
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<!-- chord conditioned input 1 -->
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Create tunes by incorporating the provided motif in the specified composition
+									structure.</p>
+								<p class="is-size-5"><b>Musical Form Input:</b> Binary, Sectional: Verse/Chorus</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:2/2
 K:Dmin
 E Ddd^c d3 f |{f} edcd efga 
 									</pre>
-	
+
 								<br>
-									<pre>
+								<pre>
 X:2
 L:1/8
 M:2/2
 K:Dmin
 BGGg fde^c d2 AF G/A/B
 									</pre>
-	
-							</p>	
-							<figure class="image">
-								<img src="./img/term_form_motif_cond_gen/motif_6_1.png" alt="" class="src" style="width: auto;height: auto;max-width: 100%;max-height: 100%">
-							</figure>
-							<figure class="image">
-								<img src="./img/term_form_motif_cond_gen/motif_6_2.png" alt="" class="src" style="width: auto;height: auto;max-width: 100%;max-height: 100%">
-							</figure>
-							<midi-player src="./asset/term_form_motif_cond_gen/term_motif_6_1.mid" sound-font>
-							</midi-player>
-							<midi-player src="./asset/term_form_motif_cond_gen/term_motif_6_2.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned output 1 -->
-	
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
+
+								</p>
+								<figure class="image">
+									<img src="./img/term_form_motif_cond_gen/motif_6_1.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 100%;max-height: 100%">
+								</figure>
+								<figure class="image">
+									<img src="./img/term_form_motif_cond_gen/motif_6_2.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 100%;max-height: 100%">
+								</figure>
+								<midi-player src="./asset/term_form_motif_cond_gen/term_motif_6_1.mid" sound-font>
+								</midi-player>
+								<midi-player src="./asset/term_form_motif_cond_gen/term_motif_6_2.mid" sound-font>
+								</midi-player>
+
 								<br>
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
 								<pre>
 X:1
 L:1/8
@@ -1219,46 +1265,48 @@ fdag fddf | e c f g2 ag | fde^c d2 de |
 f>gag fdde | fdag fddf | e c f g2 ag | fde^c d2 ||
 								</pre>
 
-							</p>
-							<figure class="image is-3by1">
-								<img src="./img/term_form_motif_cond_gen/result_6.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/term_form_motif_cond_gen/term_form_motif_6_result.mid" sound-font>
-							</midi-player>
-							<br>
-							<br>				
+								</p>
+								<figure class="image is-3by1">
+									<img src="./img/term_form_motif_cond_gen/result_6.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/term_form_motif_cond_gen/term_form_motif_6_result.mid"
+									sound-font>
+								</midi-player>
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
 
-	<div class="is-divider"></div>
+		<div class="is-divider"></div>
 
-</div>
+	</div>
 
 
-<div class="container">
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<h2 class="title is-4">Harmonize the given melody</h2>
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned input 1 -->
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b> Formulate chord combinations to increase the harmonic complexity of the specified musical excerpt.</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b>
-								<br>
-									<pre>
+	<div class="container">
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<h2 class="title is-4">Harmonize the given melody</h2>
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<!-- chord conditioned input 1 -->
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Formulate chord combinations to increase the harmonic complexity of the
+									specified musical excerpt.</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 Q:1/4=120
@@ -1270,29 +1318,29 @@ G2 | [ec]2 [ec]G [ec]2 [ec]G |[M:3/4] [ec]2 [ec][dB] [ec][fd] |
 [M:4/4] [af]2 [ge]2 [fc]4 | [ge]2 [fd]2 [ec]4 |
 [M:3/4] [dB]3 [ec] [fd]2 |1 [ec][dB] [ec][fd] :|2 [ec]4 |]
 									</pre>
-	
-							</p>
-							<figure class="image is-16by7">
-								<img src="./img/harmonize/original_3.png" alt="" class="src">
-							</figure>
-	
-							<midi-player src="./asset/harmonize/harmonize_3_original.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned output 1 -->
-	
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
+
+								</p>
+								<figure class="image is-16by7">
+									<img src="./img/harmonize/original_3.png" alt="" class="src">
+								</figure>
+
+								<midi-player src="./asset/harmonize/harmonize_3_original.mid" sound-font>
+								</midi-player>
+
 								<br>
-									<pre>
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 Q:1/4=120
@@ -1306,41 +1354,42 @@ K:C
 [M:3/4]"G" [dB]3 [ec] [fd]2 |1"C" [ec][dB] [ec][fd] :|2
 "C" [ec]4 |]
 									</pre>
-	
-							</p>
-							<figure class="image is-16by7">
-								<img src="./img/harmonize/harmonized_3.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/harmonize/harmonize_3_harmonized.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>				
+
+								</p>
+								<figure class="image is-16by7">
+									<img src="./img/harmonize/harmonized_3.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/harmonize/harmonize_3_harmonized.mid" sound-font>
+								</midi-player>
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<div class="is-divider"></div>
-	
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned input 1 -->
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b> Design a fitting succession of chords that blend well with the provided musical score.</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b>
-								<br>
-									<pre>
+		<div class="is-divider"></div>
+
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<!-- chord conditioned input 1 -->
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Design a fitting succession of chords that blend well with the provided musical
+									score.</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:4/4
@@ -1352,28 +1401,28 @@ ce e2 e2 c2 | c e2 f e2 cA |
 BAGB A2 d2 | fef^g afed | cdef e2 a^g | 
 faed cdea | fd f2 e f3 :|
 									</pre>
-	
-							</p>
-							<figure class="image is-3by1">
-								<img src="./img/harmonize/original_7.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/harmonize/harmonize_7_original.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned output 1 -->
-	
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
+
+								</p>
+								<figure class="image is-3by1">
+									<img src="./img/harmonize/original_7.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/harmonize/harmonize_7_original.mid" sound-font>
+								</midi-player>
+
 								<br>
-									<pre>
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:4/4
@@ -1389,44 +1438,45 @@ c e2 f e2 cA |"G" BAGB"A" A2 d2 |
 "D" fef^g"D/C#" afed |"Bm" cdef"A" e2 a^g | 
 faed"A" cdea |"D" fd f2 e f3 :|
 									</pre>
-	
-							</p>
-							<figure class="image is-2by1">
-								<img src="./img/harmonize/harmonized_7.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/harmonize/harmonize_7_harmonized.mid" sound-font>
-							</midi-player>
-	
-	
-							<br>
-							<br>				
+
+								</p>
+								<figure class="image is-2by1">
+									<img src="./img/harmonize/harmonized_7.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/harmonize/harmonize_7_harmonized.mid" sound-font>
+								</midi-player>
+
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
 
-	<div class="is-divider"></div>
-	
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned input 1 -->
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b> Develop a series of chord pairings that amplify the harmonious elements in the given music piece.</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b>
-								<br>
-									<pre>
+		<div class="is-divider"></div>
+
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<!-- chord conditioned input 1 -->
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Develop a series of chord pairings that amplify the harmonious elements in the
+									given music piece.</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:6/8
@@ -1435,28 +1485,28 @@ E |: EAA ABc | Bee e2 d | cBA ABc | BEE E2 D | EAA ABc |
 Bee e2 d | cBA ^GAB |1 A2 A A2 E :|2 A2 A GAB || c3 cdc | 
 Bgg g2 ^g | aed cBA |^GAB E^F^G | A^GA BAB | cde fed | 
 cBA ^GAB |1 A2 A GAB :|2 \n A3 A2 ||
-									</pre>	
-							</p>
-							<figure class="image is-16by7">
-								<img src="./img/harmonize/original_10.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/harmonize/harmonize_10_original.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned output 1 -->
-	
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									</pre>
+								</p>
+								<figure class="image is-16by7">
+									<img src="./img/harmonize/original_10.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/harmonize/harmonize_10_original.mid" sound-font>
+								</midi-player>
+
 								<br>
-									<pre>
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:6/8
@@ -1468,49 +1518,50 @@ E |:"Am" EAA ABc |"E7" Bee e2 d |"Am" cBA ABc |
 "E7" ^GAB E^F^G |"Am" A^GA"E7" BAB |"Am" cde"Dm" fed |
 "Am" cBA"E7" ^GAB |1"Am" A2 A GAB :|2 "Am" A2 A A2 ||
 									</pre>
-	
-							</p>
-							<figure class="image is-16by7">
-								<img src="./img/harmonize/harmonized_10.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/harmonize/harmonize_10_harmonized.mid" sound-font>
-							</midi-player>
-	
-	
-							<br>
-							<br>				
+
+								</p>
+								<figure class="image is-16by7">
+									<img src="./img/harmonize/harmonized_10.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/harmonize/harmonize_10_harmonized.mid" sound-font>
+								</midi-player>
+
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
 
-	<div class="is-divider"></div>
-</div>
+		<div class="is-divider"></div>
+	</div>
 
 
-<div class="container">
+	<div class="container">
 
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<h2 class="title is-4">Motif analysis</h2>
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned input 1 -->
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b> Immerse yourself in the musical piece and discover the continuous theme present within each part.</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b>
-								<br>
-									<pre>
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<h2 class="title is-4">Motif analysis</h2>
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<!-- chord conditioned input 1 -->
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Immerse yourself in the musical piece and discover the continuous theme present
+									within each part.</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:3/4
@@ -1525,86 +1576,89 @@ A2 (BA) (GF) | F2 (3DEF (3FED | B,4 D>B, | (A,2 B,2) D2 |
 D4 DE | (F2 d2) c2 |{c} B4 (cd) |
 (BA) (GF) (E>D) | D2 B,2 (D/E/F) |{F} E2 D2 D2 | D4 :|
 									</pre>
-	
-							</p>
-							<figure class="image is-2by1">
-								<img src="./img/motif_analysis/input_1.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/motif_analysis/input_1.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned output 1 -->
-	
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
+
+								</p>
+								<figure class="image is-2by1">
+									<img src="./img/motif_analysis/input_1.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/motif_analysis/input_1.mid" sound-font>
+								</midi-player>
+
 								<br>
-									<pre>
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:3/4
 K:D
 D4 DE 
 									</pre>
-	
+
 								<br>
-									<pre>
+								<pre>
 X:2
 L:1/8
 M:3/4
 K:D
 C2 B2 A2
 									</pre>
-	
-							</p>
-							<figure class="image">
-								<img src="./img/motif_analysis/motif_1_1.png" alt="" class="src" style="width: auto;height: auto;max-width: 50%;max-height: 50%">
-							</figure>
-							<figure class="image">
-								<img src="./img/motif_analysis/motif_1_2.png" alt="" class="src" style="width: auto;height: auto;max-width: 50%;max-height: 50%">
-							</figure>
-							<midi-player src="./asset/motif_analysis/motif_1_1.mid" sound-font>
-							</midi-player>
-							<midi-player src="./asset/motif_analysis/motif_1_2.mid" sound-font>
-							</midi-player>
-	
-	
-							<br>
-							<br>				
+
+								</p>
+								<figure class="image">
+									<img src="./img/motif_analysis/motif_1_1.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 50%;max-height: 50%">
+								</figure>
+								<figure class="image">
+									<img src="./img/motif_analysis/motif_1_2.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 50%;max-height: 50%">
+								</figure>
+								<midi-player src="./asset/motif_analysis/motif_1_1.mid" sound-font>
+								</midi-player>
+								<midi-player src="./asset/motif_analysis/motif_1_2.mid" sound-font>
+								</midi-player>
+
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
 
-	<div class="is-divider"></div>
-	
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned input 1 -->
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b> Immerse yourself in the musical piece and discover the continuous theme present within each part.</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b>
-								<br>
-									<pre>
+		<div class="is-divider"></div>
+
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<!-- chord conditioned input 1 -->
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Immerse yourself in the musical piece and discover the continuous theme present
+									within each part.</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:3/4
@@ -1619,70 +1673,72 @@ F2 (3DEF (3FED | B,4 D>B, | (A,2 B,2) D2 | D4 DE |
 (F2 d2) c2 |{c} B4 (cd) |(BA) (GF) (E>D) | 
 D2 B,2 (D/E/F) |{F} E2 D2 D2 | D4 :|
 									</pre>
-	
-							</p>
-							<figure class="image is-2by1">
-								<img src="./img/motif_analysis/input_2.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/motif_analysis/input_2.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned output 1 -->
-	
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
+
+								</p>
+								<figure class="image is-2by1">
+									<img src="./img/motif_analysis/input_2.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/motif_analysis/input_2.mid" sound-font>
+								</midi-player>
+
 								<br>
-									<pre>
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:3/4
 K:D
 D4 DE
 									</pre>
-	
-							</p>
-							<figure class="image is-2by1">
-								<img src="./img/motif_analysis/motif_2.png" alt="" class="src" style="width: auto;height: auto;max-width: 50%;max-height: 50%">
-							</figure>
-							<midi-player src="./asset/motif_analysis/motif_2.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>				
+
+								</p>
+								<figure class="image is-2by1">
+									<img src="./img/motif_analysis/motif_2.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 50%;max-height: 50%">
+								</figure>
+								<midi-player src="./asset/motif_analysis/motif_2.mid" sound-font>
+								</midi-player>
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
 
-	<div class="is-divider"></div>
-	
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b> Analyze the musical work and pinpoint the consistent melodic element in every section.</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b>
-								<br>
-									<pre>
+		<div class="is-divider"></div>
+
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Analyze the musical work and pinpoint the consistent melodic element in every
+									section.</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:4/4
@@ -1692,74 +1748,76 @@ d2 cB g2 fe | edcB cBAG | BAGE DEGA | B2 G2 G2 :: ga |
 b2 gb a2 fa | g2 eg edcB | e2 A2 ABcd | edcB A2 ga | 
 b2 gb a2 fa | g2 eg edcB | cBAG DEGA | B2 G2 G2 :|
 									</pre>
-	
-							</p>
-							<figure class="image is-3by1">
-								<img src="./img/motif_analysis/input_3.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/motif_analysis/input_3.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned output 1 -->
-	
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
+
+								</p>
+								<figure class="image is-3by1">
+									<img src="./img/motif_analysis/input_3.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/motif_analysis/input_3.mid" sound-font>
+								</midi-player>
+
 								<br>
-									<pre>
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:4/4
 K:G
 ge d2 G2 cBAG d2 G2 cBAG
 									</pre>
-	
-							</p>
-							<figure class="image">
-								<img src="./img/motif_analysis/motif_3.png" alt="" class="src" style="width: auto;height: auto;max-width: 100%;max-height: 100%">
-							</figure>
-							<midi-player src="./asset/motif_analysis/motif_3.mid" sound-font>
-							</midi-player>
-	
-							<br>
-							<br>				
+
+								</p>
+								<figure class="image">
+									<img src="./img/motif_analysis/motif_3.png" alt="" class="src"
+										style="width: auto;height: auto;max-width: 100%;max-height: 100%">
+								</figure>
+								<midi-player src="./asset/motif_analysis/motif_3.mid" sound-font>
+								</midi-player>
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<div class="is-divider"></div>
-</div>
-
+		<div class="is-divider"></div>
+	</div>
 
 
-<div class="container">
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<h2 class="title is-4">Musical form analysis</h2>
-				<div class="container  content has-text-centered">
-					<div class="columns">
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned input 1 -->
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b>Investigate the attributes of this musical creation and identify its arrangement using suitable music-related terms.</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b> 
-								<br>
-									<pre>
+
+	<div class="container">
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<h2 class="title is-4">Musical form analysis</h2>
+					<div class="container  content has-text-centered">
+						<div class="columns">
+
+							<div class="column is-6">
+
+								<!-- chord conditioned input 1 -->
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b>Investigate the attributes of this musical creation and identify its arrangement
+									using suitable music-related terms.</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:3/4
@@ -1769,57 +1827,58 @@ B,2 G,2 G,A, | B,2 z2 G,B, | ED C2 E2 |
 F2 z2 F,F, | F4 DB, | C4 A,F, | B,2 C2 D2 |{A,} C4 F,F, | 
 F4 DB, | C4 A,F, | B,2{CB,} A,2 G,2 | F,4 |]
 									</pre>
-	
-							</p>
-							<figure class="image is-3by1">
-								<img src="./img/musical_form_analysis/input_1.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/musical_form_analysis/input_1.mid" sound-font>
-							</midi-player>
-							<br>
-							<br>	
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-	
-							<!-- chord conditioned output 1 -->
-	
-							<p class="is-size-5"><b>Musical Form Output:
+
+								</p>
+								<figure class="image is-3by1">
+									<img src="./img/musical_form_analysis/input_1.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/musical_form_analysis/input_1.mid" sound-font>
+								</midi-player>
 								<br>
-							</b> Only One Section</p>
-	
-							<br>
-							<br>				
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>Musical Form Output:
+										<br>
+									</b> Only One Section</p>
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
-	
-	<div class="is-divider"></div>
-	
-	<section class="section ">
-		<!-- Results. -->
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-						<div class="column is-6">
-							<!-- chord conditioned input 2 -->
-	
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b> Investigate the aspects of this musical work and convey its structural organization using suitable musical words.</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b>
-								<br>
-									<pre>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
+
+		<div class="is-divider"></div>
+
+		<section class="section ">
+			<!-- Results. -->
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns">
+							<div class="column is-6">
+								<!-- chord conditioned input 2 -->
+
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Investigate the aspects of this musical work and convey its structural
+									organization using suitable musical words.</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:2/2
@@ -1835,53 +1894,54 @@ g2 af g2 ef | gedc BAGB | Aaag ageg | aged ^cdef |
 gbaf g2 ef | gedc BAGB | ABcd efge |1
 aged ^cdef :|2 aged cAFA ||
 									</pre>
-	
-							</p>
-							<figure class="image is-2by1">
-								<img src="./img/musical_form_analysis/input_2.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/musical_form_analysis/input_2.mid" sound-font>
-							</midi-player>
-							<br>
-							<br>
-						</div>
-	
-						
-	
-						<div class="column is-6">
-							<!-- chord conditioned output 2 -->
-							<p class="is-size-5"><b>Musical Form Output:
+
+								</p>
+								<figure class="image is-2by1">
+									<img src="./img/musical_form_analysis/input_2.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/musical_form_analysis/input_2.mid" sound-font>
+								</midi-player>
 								<br>
-							</b>Compound Binary</p>
-	
-	
-							<br>
-							<br>				
+								<br>
+							</div>
+
+
+
+							<div class="column is-6">
+								<!-- chord conditioned output 2 -->
+								<p class="is-size-5"><b>Musical Form Output:
+										<br>
+									</b>Compound Binary</p>
+
+
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	
-	<div class="is-divider"></div>
+		</section>
 
-	<section class="section ">
-		<!-- Results. -->
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-10">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-						<div class="column is-6">
-							<!-- chord conditioned input 3 -->
-	
-							<p class="is-size-5"><b>Text Input:
-								<br>
-							</b> Investigate the components of this music and outline its form using specialized musical language.</p>
-							<p class="is-size-5"><b>ABC Notation Music Input:</b>
-								<br>
-									<pre>
+		<div class="is-divider"></div>
+
+		<section class="section ">
+			<!-- Results. -->
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-10">
+					<div class="container  content has-text-centered">
+						<div class="columns">
+							<div class="column is-6">
+								<!-- chord conditioned input 3 -->
+
+								<p class="is-size-5"><b>Text Input:
+										<br>
+									</b> Investigate the components of this music and outline its form using specialized
+									musical language.</p>
+								<p class="is-size-5"><b>ABC Notation Music Input:</b>
+									<br>
+								<pre>
 X:1
 L:1/8
 M:4/4
@@ -1890,55 +1950,55 @@ d6 e f- | f2 A2 d2 c c- | c B3- B4 | z8 | g6 e c- |
 c2 A2 d2 d f- | f8 | z8 | d6 e f- | f2 f a- a2 g2 | 
 g B3- B4 | z8 | c6 B A- | A g3 f2 e d- | d8 | z8 |]
 									</pre>
-	
-							</p>
-							<figure class="image is-3by1">
-								<img src="./img/form_cond_gen/form_3.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/musical_form_analysis/input_3.mid" sound-font>
-							</midi-player>
-							<br>
-							<br>						
-	
-						</div>
-	
-						
-	
-						<div class="column is-6">
-							<!-- chord conditioned output 3 -->
-							<p class="is-size-5"><b>Musical Form Output:
+
+								</p>
+								<figure class="image is-3by1">
+									<img src="./img/musical_form_analysis/input_3.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/musical_form_analysis/input_3.mid" sound-font>
+								</midi-player>
 								<br>
-							</b> Only One Section</p>
-							<br>
-							<br>						
+								<br>
+
+							</div>
+
+
+
+							<div class="column is-6">
+								<!-- chord conditioned output 3 -->
+								<p class="is-size-5"><b>Musical Form Output:
+										<br>
+									</b> Only One Section</p>
+								<br>
+								<br>
+							</div>
+
 						</div>
-	
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	</section>
+			<!--/ Results. -->
+		</section>
 
-	<div class="is-divider"></div>
+		<div class="is-divider"></div>
 
-</div>
+	</div>
 
 
-<div class="container">
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-six-fifths">
-				<h2 class="title is-4">Bach's style symbolic music generation</h2>
-				<div class="container  content has-text-centered">
-					<div class="columns">
-						<div class="column">
-							<h2 class="title is-5">Results</h2>
+	<div class="container">
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-six-fifths">
+					<h2 class="title is-4">Bach's style symbolic music generation</h2>
+					<div class="container  content has-text-centered">
+						<div class="columns">
+							<div class="column">
+								<h2 class="title is-5">Results</h2>
 
-							<!-- chord conditioned output 1 -->
+								<!-- chord conditioned output 1 -->
 
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
-								<br>
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
 								<div style="width:700px;overflow:auto;font-size:0.75em">
 									<pre>
 X:1
@@ -2008,43 +2068,43 @@ z6"C" C,2 |"Am" A,,2"Em" E,2"C" C,2"C" C,2 |"Am" A,,2"Em" E,2"C" !fermata!C,2"C"
 								</div>
 
 
-							</p>
-						</div>
-						<div class="column">
-							<figure class="image is-11by16">
-								<img src="./img/Bach/Bach_1.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/Bach/Bach_1.mid" sound-font>
-							</midi-player>
-						</div>
+								</p>
+							</div>
+							<div class="column">
+								<figure class="image is-11by16">
+									<img src="./img/Bach/Bach_1.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/Bach/Bach_1.mid" sound-font>
+								</midi-player>
+							</div>
 
-						<br>
-						<br>				
+							<br>
+							<br>
 
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
 
-	<div class="is-divider"></div>
+		<div class="is-divider"></div>
 
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-six-fifths">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-						
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-six-fifths">
+					<div class="container  content has-text-centered">
+						<div class="columns">
 
-						<div class="column">
-							<h2 class="title is-5">Results</h2>
 
-							<!-- chord conditioned output 1 -->
+							<div class="column">
+								<h2 class="title is-5">Results</h2>
 
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
-								<br>
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
 								<div style="width:700px;overflow:auto;font-size:0.75em">
 									<pre>
 X:1
@@ -2113,43 +2173,43 @@ G,2 A,B, C2 B,2 | C2 B,2 !fermata!G,2 C2 | C2 B,2 A,2 G,2 | G,2 G,2 !fermata!G,2
 								</div>
 
 
-							</p>
-						</div>
-						<div class="column">
-							<figure class="image is-11by16">
-								<img src="./img/Bach/bach_2.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/Bach/bach_2.mid" sound-font>
-							</midi-player>
-						</div>
+								</p>
+							</div>
+							<div class="column">
+								<figure class="image is-11by16">
+									<img src="./img/Bach/bach_2.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/Bach/bach_2.mid" sound-font>
+								</midi-player>
+							</div>
 
-						<br>
-						<br>				
+							<br>
+							<br>
 
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
 
-	<div class="is-divider"></div>
+		<div class="is-divider"></div>
 
-	<section class="section ">
-		<div class="columns is-centered has-text-centered">
-			<div class="column is-six-fifths">
-				<div class="container  content has-text-centered">
-					<div class="columns">
-						
+		<section class="section ">
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-six-fifths">
+					<div class="container  content has-text-centered">
+						<div class="columns">
 
-						<div class="column">
-							<h2 class="title is-5">Results</h2>
 
-							<!-- chord conditioned output 1 -->
+							<div class="column">
+								<h2 class="title is-5">Results</h2>
 
-							<p class="is-size-5"><b>ABC Notation Music Output:</b>
-								<br>
+								<!-- chord conditioned output 1 -->
+
+								<p class="is-size-5"><b>ABC Notation Music Output:</b>
+									<br>
 								<div style="width:700px;overflow:auto;font-size:0.75em">
 									<pre>
 X:1
@@ -2197,29 +2257,29 @@ V:4
 								</div>
 
 
-							</p>
-						</div>
-						<div class="column">
-							<figure class="image is-5by4">
-								<img src="./img/Bach/bach_3.png" alt="" class="src">
-							</figure>
-							<midi-player src="./asset/Bach/bach_3.mid" sound-font>
-							</midi-player>
-						</div>
-						<br>
-						<br>				
+								</p>
+							</div>
+							<div class="column">
+								<figure class="image is-5by4">
+									<img src="./img/Bach/bach_3.png" alt="" class="src">
+								</figure>
+								<midi-player src="./asset/Bach/bach_3.mid" sound-font>
+								</midi-player>
+							</div>
+							<br>
+							<br>
 
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--/ Results. -->    
-	<div class="container ">
-	</section>
+			<!--/ Results. -->
+			<div class="container ">
+		</section>
 
-	<div class="is-divider"></div>
+		<div class="is-divider"></div>
 
-</div>
+	</div>
 
 
 
