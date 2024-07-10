@@ -1,2 +1,2 @@
-# ChatMusician.github.io
+# ChatMusician
 Demo page for ChatMusician
